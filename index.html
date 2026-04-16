@@ -33,16 +33,27 @@
       font-size: 1.2rem;
     }
 
-    nav a {
-      color: white;
-      margin-left: 1rem;
-      text-decoration: none;
-      font-size: 0.95rem;
-    }
+  nav {
+  display: flex;
+  gap: 0.75rem;
+}
 
-    nav a:hover {
-      text-decoration: underline;
-    }
+.nav-btn {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
+}
+
+.nav-btn:hover {
+  background: white;
+  color: #111827;
+  transform: translateY(-2px);
+}
 
     /* HERO */
     .hero {
@@ -112,12 +123,12 @@
 
   <header>
     <h1>My Website</h1>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Articles</a>
-      <a href="#">Contact</a>
-    </nav>
+  <nav>
+  <a href="#home" class="nav-btn">Home</a>
+  <a href="#about" class="nav-btn">About</a>
+  <a href="#articles" class="nav-btn">Articles</a>
+  <a href="#contact" class="nav-btn">Contact</a>
+</nav>
   </header>
 
   <section class="hero">
