@@ -3,23 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Cool Homepage</title>
+  <title>Aaron | Cycling & Writing</title>
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
-
     body {
-      line-height: 1.6;
-      color: #333;
-      background: #f5f7fb;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      color: #222;
     }
 
-    /* NAVBAR */
+    /* NAV */
     header {
       background: #111827;
       color: white;
@@ -29,72 +23,59 @@
       align-items: center;
     }
 
-    header h1 {
-      font-size: 1.2rem;
+    nav a {
+      color: white;
+      margin-left: 1rem;
+      text-decoration: none;
     }
 
-nav a { 
-  color: white; 
-  margin-left: 1rem; 
-  text-decoration: none; 
-  font-size: 0.95rem; } 
-    
-nav a:hover { text-decoration: underline; }
+    nav a:hover {
+      text-decoration: underline;
+    }
 
     /* HERO */
     .hero {
-      background: linear-gradient(135deg, #4f46e5, #06b6d4);
-      color: white;
-      padding: 5rem 2rem;
+      padding: 4rem 2rem;
       text-align: center;
+      background: linear-gradient(135deg, #2563eb, #22c55e);
+      color: white;
     }
 
-    .hero h2 {
+    .hero h1 {
       font-size: 2.5rem;
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
     }
 
-    .hero p {
-      font-size: 1.2rem;
-      max-width: 600px;
-      margin: 0 auto 2rem auto;
-    }
-
-    .hero button {
-      background: white;
-      color: #111827;
-      border: none;
-      padding: 0.8rem 1.5rem;
-      font-size: 1rem;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-
-    .hero button:hover {
-      background: #e5e7eb;
-    }
-
-    /* FEATURES */
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
+    /* SECTIONS */
+    section {
       padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: auto;
     }
 
     .card {
       background: white;
       padding: 1.5rem;
+      margin: 1rem 0;
       border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
     }
 
-    .card h3 {
-      margin-bottom: 0.5rem;
-      color: #111827;
+    /* GRID for articles */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
     }
 
-    /* FOOTER */
+    /* STRAVA EMBED */
+    iframe {
+      width: 100%;
+      height: 500px;
+      border: none;
+      border-radius: 10px;
+    }
+
     footer {
       text-align: center;
       padding: 2rem;
@@ -107,42 +88,78 @@ nav a:hover { text-decoration: underline; }
 
 <body>
 
-  <header>
-    <h1>My Website</h1>
+<header>
+  <div><strong>My Cycling Site</strong></div>
   <nav>
-  <a href="#home" class="nav-btn">Home</a>
-  <a href="#about" class="nav-btn">About</a>
-  <a href="#articles" class="nav-btn">Articles</a>
-  <a href="#contact" class="nav-btn">Contact</a>
-</nav>
-  </header>
+    <a href="#resume">Resume</a>
+    <a href="#articles">Articles</a>
+    <a href="#strava">Strava</a>
+  </nav>
+</header>
 
-  <section class="hero">
-    <h2>Welcome to My Site</h2>
-    <p>A modern homepage template you can use to showcase your work, articles, or personal brand.</p>
-    <button>Get Started</button>
-  </section>
+<!-- HERO -->
+<div class="hero">
+  <h1>Hi, I'm a Cyclist & Writer</h1>
+  <p>I race, write, and share insights from training and competition.</p>
+</div>
 
-  <section class="features">
+<!-- RESUME -->
+<section id="resume">
+  <h2>Resume</h2>
+
+  <div class="card">
+    <h3>Education</h3>
+    <p>NorthWest Arkansas Community College (example)</p>
+  </div>
+
+  <div class="card">
+    <h3>Experience</h3>
+    <p>Marketing, content creation, cycling performance analysis, etc.</p>
+  </div>
+
+  <div class="card">
+    <h3>Skills</h3>
+    <p>HTML, CSS, Writing, Cycling Training, Data Analysis</p>
+  </div>
+</section>
+
+<!-- ARTICLES -->
+<section id="articles">
+  <h2>Bike Racing Articles</h2>
+
+  <div class="grid">
     <div class="card">
-      <h3>Write Articles</h3>
-      <p>Share your thoughts, guides, or insights in a clean and readable format.</p>
+      <h3>Training Through Fatigue</h3>
+      <p>How I manage heavy training weeks while staying consistent.</p>
     </div>
 
     <div class="card">
-      <h3>Show Projects</h3>
-      <p>Highlight your coding projects, designs, or creative work.</p>
+      <h3>Race Day Strategy</h3>
+      <p>Positioning, pacing, and reading the peloton.</p>
     </div>
 
     <div class="card">
-      <h3>Grow Audience</h3>
-      <p>Build your personal brand and connect with visitors easily.</p>
+      <h3>Nutrition on the Bike</h3>
+      <p>What actually works during long endurance rides.</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <footer>
-    <p>© 2026 My Website. Built with HTML & CSS.</p>
-  </footer>
+<!-- STRAVA -->
+<section id="strava">
+  <h2>My Strava Activity</h2>
+
+  <div class="card">
+    <p>You can embed your Strava profile or activity feed here.</p>
+
+    <!-- Example embed (replace with your Strava embed code) -->
+    <iframe src="https://www.strava.com/athletes/1"></iframe>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 My Cycling Website</p>
+</footer>
 
 </body>
 </html>
